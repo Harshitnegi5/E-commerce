@@ -7,28 +7,42 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between py-5 font-medium ">
-
-      <Link to={"/"}>
-      <img src={assets.logo} className="w-36" alt="" />
-
-      </Link>
+      <NavLink to={"/"}>
+        <img src={assets.logo} className="w-36" alt="" />
+      </NavLink>
 
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
-        <NavLink to="/" className="flex flex-col gap-1 items-center">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            ` ${isActive ? "border-b-2 border-gray-700" : ""} `
+          }
+        >
           <p className="font-medium font-[monument]">HOME</p>
-          <hr className="w-20 border-0 h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="/collection" className="flex flex-col gap-1 items-center">
+        <NavLink
+          to="/collection"
+          className={({ isActive }) =>
+            ` ${isActive ? "border-b-2 border-gray-700" : ""} `
+          }
+        >
           <p className="font-medium font-[monument]">COLLECTION</p>
-          <hr className="w-20 border-0 h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="about" className="flex flex-col gap-1 items-center">
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            ` ${isActive ? "border-b-2 border-gray-700" : ""} `
+          }
+        >
           <p className="font-medium font-[monument]">ABOUT</p>
-          <hr className="w-20 border-0 h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="/contact" className="flex flex-col gap-1 items-center">
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            ` ${isActive ? "border-b-2 border-gray-700" : ""} `
+          }
+        >
           <p className="font-medium font-[monument]">CONTACT</p>
-          <hr className="w-20 border-0 h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
       </ul>
 
@@ -64,7 +78,8 @@ const Navbar = () => {
         />
       </div>
 
-      <div className={` h-screen absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
+      <div
+        className={` h-screen absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
           visible ? "w-full" : "w-0"
         }`}
       >
@@ -115,3 +130,57 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
+
+// const Navbar = () => {
+//   return (
+//     <nav className="bg-gray-800 py-4">
+//       <div className="container mx-auto flex justify-between items-center">
+//         <div className="text-white font-bold text-xl">
+//           Logo
+//         </div>
+//         <ul className="flex space-x-4">
+//           <li>
+//             <NavLink
+//               to="/"
+//               className={({ isActive }) =>
+//                 isActive
+//                   ? 'text-white font-bold hover:text-gray-300'
+//                   : 'text-gray-400 hover:text-white'
+//               }
+//             >
+//            Home
+//             </NavLink>
+//           </li>
+//           <li>
+//             <NavLink
+//               to="/about"
+//               className={({ isActive }) =>
+//                 isActive
+//                   ? 'text-white font-bold hover:text-gray-300'
+//                   : 'text-gray-400 hover:text-white'
+//               }
+//             >
+//               About
+//             </NavLink>
+//           </li>
+//           <li>
+//             <NavLink
+//               to="/contact"
+//               className={({ isActive }) =>
+//                 isActive
+//                   ? 'text-white font-bold hover:text-gray-300'
+//                   : 'text-gray-400 hover:text-white'
+//               }
+//             >
+//               Contact
+//             </NavLink>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;

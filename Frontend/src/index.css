@@ -16,9 +16,7 @@ html,body{
     width:100%;
 }
 
-a.active hr{
-    display: block;
-}
+
 
 .cart{
     @apply  absolute right-[-5px] aspect-square bottom-[-5px] w-4 text-center leading-4 bg-black text-white rounded-full text-[8px]
