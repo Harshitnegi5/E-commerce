@@ -97,31 +97,47 @@ const Navbar = () => {
           </div>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border font-semibold font-[monument]"
+            className={({ isActive }) =>
+              `py-2 pl-6 border font-semibold ${
+                isActive && "bg-black text-white"
+              } font-[monument]`
+            }
             to="/"
           >
             HOME
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border-2 font-semibold font-[monument]"
+            className={({ isActive }) =>
+              `py-2 pl-6 border font-semibold ${
+                isActive && "bg-black text-white"
+              } font-[monument]`
+            }
             to="/collection"
           >
             COLLECTION
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border-2 font-semibold font-[monument]"
+            className={({ isActive }) =>
+              `py-2 pl-6 border font-semibold ${
+                isActive && "bg-black text-white"
+              } font-[monument]`
+            }
             to="/about"
           >
             ABOUT
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border-2 font-semibold font-[monument]"
-            to="/contact"
+            className={({ isActive }) =>
+              `py-2 pl-6 border font-semibold ${
+                isActive && "bg-black text-white"
+              } font-[monument]`
+            }
+            to="/contatc"
           >
-            CONTACT{" "}
+            CONTACT
           </NavLink>
         </div>
       </div>
@@ -130,57 +146,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// import React from 'react';
-// import { NavLink } from 'react-router-dom';
-
-// const Navbar = () => {
-//   return (
-//     <nav className="bg-gray-800 py-4">
-//       <div className="container mx-auto flex justify-between items-center">
-//         <div className="text-white font-bold text-xl">
-//           Logo
-//         </div>
-//         <ul className="flex space-x-4">
-//           <li>
-//             <NavLink
-//               to="/"
-//               className={({ isActive }) =>
-//                 isActive
-//                   ? 'text-white font-bold hover:text-gray-300'
-//                   : 'text-gray-400 hover:text-white'
-//               }
-//             >
-//            Home
-//             </NavLink>
-//           </li>
-//           <li>
-//             <NavLink
-//               to="/about"
-//               className={({ isActive }) =>
-//                 isActive
-//                   ? 'text-white font-bold hover:text-gray-300'
-//                   : 'text-gray-400 hover:text-white'
-//               }
-//             >
-//               About
-//             </NavLink>
-//           </li>
-//           <li>
-//             <NavLink
-//               to="/contact"
-//               className={({ isActive }) =>
-//                 isActive
-//                   ? 'text-white font-bold hover:text-gray-300'
-//                   : 'text-gray-400 hover:text-white'
-//               }
-//             >
-//               Contact
-//             </NavLink>
-//           </li>
-//         </ul>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
