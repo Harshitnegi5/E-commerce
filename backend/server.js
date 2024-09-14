@@ -1,9 +1,11 @@
 import express from "express";
 import cors from "cors"
 import "dotenv/config"
+import connectDB from "./config/db.js";
 
 const app = express() // app config
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 4000;
+connectDB();
 
 // middlewares
 
@@ -15,7 +17,7 @@ app.use(cors())
 //Api endpoints
 
 app.get("/",(req,res)=>{
-    res.setEncoding("Api Working")
+    res.send("Api Working")
 })
 
 app.listen(port,()=>{
