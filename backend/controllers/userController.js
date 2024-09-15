@@ -1,4 +1,4 @@
-const loginUser = async () => {   // route for user login
+const loginUser = async (req,res) => {   // route for user login
 
 }
 
@@ -6,8 +6,13 @@ const loginUser = async () => {   // route for user login
 
 // route for user registration
 
-const registerUser = async () => {
+const registerUser = async (req,res) => {
     
+}
+
+
+const adminLogin = async (req,res) => {
+
 }
 
 
@@ -21,4 +26,4 @@ const registerUser = async () => {
 
 
 
-export {registerUser,loginUser,}
+export {registerUser,loginUser,adminLogin}

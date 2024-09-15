@@ -9,4 +9,4 @@ const Title = ({text1,text2}) => {
   )
 }
 
-export default Title
+export default Title;

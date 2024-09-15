@@ -6,7 +6,7 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="flex items-center justify-between py-5 font-medium ">
+    <div className="flex items-center w-full justify-between py-5 font-medium ">
       <NavLink to={"/"}>
         <img src={assets.logo} className="w-36" alt="" />
       </NavLink>
@@ -21,7 +21,7 @@ const Navbar = () => {
           <p className="font-medium font-[monument]">HOME</p>
         </NavLink>
         <NavLink
-          to="/collection"
+          to="/Collection"
           className={({ isActive }) =>
             ` ${isActive ? "border-b-2 border-gray-700" : ""} `
           }
