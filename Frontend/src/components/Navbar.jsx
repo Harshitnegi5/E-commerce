@@ -21,7 +21,7 @@ const Navbar = () => {
           <p className="font-medium font-[monument]">HOME</p>
         </NavLink>
         <NavLink
-          to="/Collection"
+          to="/collection"
           className={({ isActive }) =>
             ` ${isActive ? "border-b-2 border-gray-700" : ""} `
           }
@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={` h-screen absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
+        className={` z-[100]  h-screen absolute top-0 right-0 bottom-0 overflow-y-hidden bg-white transition-all ${
           visible ? "w-full" : "w-0"
         }`}
       >
